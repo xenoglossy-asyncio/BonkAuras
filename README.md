@@ -52,6 +52,10 @@ Hordes of Azeroth uses two separate buff systems, and BonkAuras tracks both:
 
 ### Main window
 
+![BonkAuras configuration window](docs/config.jpg)
+
+*The `/wa` window: current buffs, tracked entries, manual spell-ID entry, import/export, profiles, and Hordes of Azeroth state buttons.*
+
 - **Current buffs**: click a row to start tracking that buff.
 - **Tracked**: lists every tracked entry. Right-click a row to stop tracking it.
 - **Add buff by ID**: enter a spell ID and press Add. Examples: `13046` (Enrage), `13877` (Blade Flurry), `1243` (Power Word: Fortitude).
