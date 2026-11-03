@@ -88,3 +88,7 @@ BonkAuras 把玩家身上的真实 Buff 和 Hordes of Azeroth 的天赋状态放
 - `BonkAurasSpells.lua` 由 1.12.1 客户端的 `Spell.dbc` 和 `SpellIcon.dbc` 生成，请勿手动修改。
 - 合并到 `main` 的 Pull Request 会运行基础 Lua 语法检查和 TOC 文件检查。
 - 推送 `v0.10` 这类标签会打包完整的 `BonkAuras` 插件目录并发布 Release。
+
+## 许可证
+
+MIT，见 [LICENSE](LICENSE)。

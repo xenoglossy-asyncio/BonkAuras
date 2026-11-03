@@ -88,3 +88,7 @@ The UI language follows Hordes of Azeroth by default, and tracker tooltips are d
 - `BonkAurasSpells.lua` is generated from the 1.12.1 client's `Spell.dbc` and `SpellIcon.dbc`. Do not edit it by hand.
 - Pull requests to `main` run a basic Lua syntax check and a TOC file check.
 - Pushing a tag such as `v0.10` builds and publishes a release zip containing the complete `BonkAuras` addon folder.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
