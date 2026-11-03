@@ -34,7 +34,7 @@ BonkAuras 把玩家身上的真实 Buff 和 Hordes of Azeroth 的天赋状态放
 
    确保 `BonkAuras.toc`、`BonkAuras.lua`、`BonkAurasSpells.lua` 直接位于该文件夹内。
 
-3. 重启游戏，或输入 `/reload`。
+3. 重启游戏。如果之前已经安装过 BonkAuras，输入 `/reload` 即可。
 4. 输入 `/wa` 打开配置窗口。
 
 ## 使用

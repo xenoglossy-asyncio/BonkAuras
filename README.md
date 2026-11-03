@@ -34,7 +34,7 @@ BonkAuras puts the player's real buffs and the talent states of Hordes of Azerot
 
    The folder should contain `BonkAuras.toc`, `BonkAuras.lua`, and `BonkAurasSpells.lua` directly.
 
-3. Restart the game or run `/reload`.
+3. Restart the game. If BonkAuras was already installed, `/reload` is enough.
 4. Type `/wa` to open the configuration window.
 
 ## Usage
