@@ -1,14 +1,21 @@
 # BonkAuras
 
-WeakAuras-style buff tracking for **Hordes of Azeroth** (1.12.1 / benilla client).
+WeakAuras-style buff tracking for [Hordes of Azeroth](https://github.com/jonhaldors/hordes-of-azeroth) (1.12.1 / benilla client).
 
-BonkAuras puts the player's real buffs and the talent states of Hordes of Azeroth on compact, movable icons. It is a standalone addon: no libraries, no launcher changes, no server changes.
+BonkAuras puts native 1.12.1 buffs and Hordes of Azeroth state buffs on compact, movable icons. It is a standalone addon: no libraries, no launcher changes, no server changes.
 
 [中文说明](README_zh.md)
 
+## Two kinds of buffs
+
+Hordes of Azeroth uses two separate buff systems, and BonkAuras tracks both:
+
+- **Native 1.12.1 buffs**: auras managed by the original client, such as Power Word: Fortitude, Enrage, or Blade Flurry. BonkAuras reads them with the 1.12.1 buff API. Add them by clicking a row in the current-buff list or by entering their spell ID.
+- **Hordes of Azeroth state buffs**: talent and system states managed by Hordes of Azeroth, such as Shield, Dash, Determination, Necrotic, and Wounded. These are not ordinary client auras. BonkAuras reads them from the `BONK~` messages that the `HordesOfAzeroth` addon receives from the server, so that addon must be installed and enabled.
+
 ## Features
 
-- Tracks real player buffs and Hordes of Azeroth states: Shield, Dash, Determination, Necrotic, and Wounded.
+- Tracks native 1.12.1 player buffs and Hordes of Azeroth state buffs: Shield, Dash, Determination, Necrotic, and Wounded.
 - Hordes of Azeroth state names and descriptions follow the language chosen in Hordes of Azeroth itself.
 - Stacks are shown in the center of the icon, values above it, and remaining time below it.
 - Inactive trackers stay in place: greyed out by default, or fully hidden if preferred.
@@ -20,8 +27,8 @@ BonkAuras puts the player's real buffs and the talent states of Hordes of Azerot
 
 ## Requirements
 
-- Hordes of Azeroth with the benilla client.
-- The `HordesOfAzeroth` addon for the Hordes of Azeroth state trackers. Real buff tracking works without it.
+- [Hordes of Azeroth](https://github.com/jonhaldors/hordes-of-azeroth) with the benilla client.
+- The `HordesOfAzeroth` addon for the Hordes of Azeroth state buffs. Native 1.12.1 buff tracking works without it.
 
 ## Installation
 
@@ -73,14 +80,14 @@ Open **Profiles** from the first row of the main window.
 
 ### Default profile
 
-On a fresh installation BonkAuras creates an account-wide profile named `Default` (`默认` when Hordes of Azeroth is in Chinese) with five Hordes of Azeroth state trackers: Shield, Dash, Necrotic, Wounded, and Determination.
+On a fresh installation BonkAuras creates an account-wide profile named `Default` (`默认` when Hordes of Azeroth is in Chinese) with five Hordes of Azeroth state buffs: Shield, Dash, Necrotic, Wounded, and Determination.
 
 The UI language follows Hordes of Azeroth by default, and tracker tooltips are disabled. Both can be changed from the main window.
 
 ## Notes
 
 - The 1.12.1 client does not expose the spell ID of an active buff to addons. BonkAuras therefore identifies tracked buffs by their icon. The ID shown for a game buff comes from a bundled 1.12.1 spell index and is a representative ID when several spells share an icon; adding that ID still tracks the correct icon.
-- Hordes of Azeroth state trackers depend on the `BONK~` messages sent by the Hordes of Azeroth server, so the `HordesOfAzeroth` addon must be installed and enabled.
+- Hordes of Azeroth state buffs depend on the `BONK~` messages sent by the Hordes of Azeroth server, so the `HordesOfAzeroth` addon must be installed and enabled.
 - The addon tracks the player's own buffs only.
 
 ## Development

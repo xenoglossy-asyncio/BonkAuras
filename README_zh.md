@@ -1,14 +1,21 @@
 # BonkAuras
 
-适用于 **Hordes of Azeroth**（1.12.1 / benilla 客户端）的 WeakAuras 风格 Buff 监控插件。
+适用于 [Hordes of Azeroth](https://github.com/jonhaldors/hordes-of-azeroth)（1.12.1 / benilla 客户端）的 WeakAuras 风格 Buff 监控插件。
 
-BonkAuras 把玩家身上的真实 Buff 和 Hordes of Azeroth 的天赋状态放在紧凑、可拖动的图标上。它是一个独立插件：不需要额外库、不修改启动器、不修改服务端。
+BonkAuras 把 1.12.1 原生 Buff 和 Hordes of Azeroth 的状态 Buff 放在紧凑、可拖动的图标上。它是一个独立插件：不需要额外库、不修改启动器、不修改服务端。
 
 [English](README.md)
 
+## 两种 Buff
+
+Hordes of Azeroth 有两套独立的 Buff 系统，BonkAuras 两种都支持：
+
+- **1.12.1 原生 Buff**：由原版客户端管理的 Buff，例如真言术：韧、狂怒、剑刃乱舞。BonkAuras 通过 1.12.1 的 Buff API 读取；可以在“当前玩家 Buff”列表点击添加，也可以输入法术 ID 添加。
+- **Hordes of Azeroth 状态 Buff**：由 Hordes of Azeroth 管理的天赋和系统状态，例如护盾、冲刺、决心、死疽、受创。它们不是普通的客户端 Buff，BonkAuras 从 `HordesOfAzeroth` 插件收到的 `BONK~` 消息中读取，因此必须安装并启用该插件。
+
 ## 功能
 
-- 监控玩家真实 Buff，以及 Hordes of Azeroth 的护盾、冲刺、决心、死疽、受创状态。
+- 监控 1.12.1 原生 Buff，以及 Hordes of Azeroth 的状态 Buff：护盾、冲刺、决心、死疽、受创。
 - Hordes of Azeroth 状态的名称和描述直接读取 HOA 的本地化，HOA 是什么语言就显示什么语言。
 - 层数居中显示在图标内，数值显示在图标上方，剩余时间显示在图标下方。
 - 未生效的监控保留在原位：默认灰色，也可以设置为完全透明。
@@ -20,8 +27,8 @@ BonkAuras 把玩家身上的真实 Buff 和 Hordes of Azeroth 的天赋状态放
 
 ## 前置条件
 
-- 使用 benilla 客户端的 Hordes of Azeroth。
-- Hordes of Azeroth 天赋状态监控需要安装并启用 `HordesOfAzeroth` 插件。真实 Buff 监控不依赖它。
+- [Hordes of Azeroth](https://github.com/jonhaldors/hordes-of-azeroth)，使用 benilla 客户端。
+- Hordes of Azeroth 状态 Buff 监控需要安装并启用 `HordesOfAzeroth` 插件。1.12.1 原生 Buff 监控不依赖它。
 
 ## 安装
 
@@ -73,14 +80,14 @@ BonkAuras 把玩家身上的真实 Buff 和 Hordes of Azeroth 的天赋状态放
 
 ### 默认配置
 
-首次安装时，BonkAuras 会创建一个名为 `Default`（HOA 为中文时为“默认”）的账号通用配置页，包含 5 个 Hordes of Azeroth 状态监控：护盾、冲刺、死疽、受创、决心。
+首次安装时，BonkAuras 会创建一个名为 `Default`（HOA 为中文时为“默认”）的账号通用配置页，包含 5 个 Hordes of Azeroth 状态 Buff：护盾、冲刺、死疽、受创、决心。
 
 界面语言默认跟随 Hordes of Azeroth，追踪图标 Tooltip 默认关闭。两项都可以在主界面修改。
 
 ## 说明
 
 - 1.12.1 客户端不向插件暴露当前 Buff 的真实法术 ID，因此 BonkAuras 使用图标来识别被监控的 Buff。游戏 Buff 上显示的 ID 来自内置的 1.12.1 法术索引；同一图标对应多个法术时显示的是代表 ID，使用该 ID 添加仍会正确监控这个图标。
-- Hordes of Azeroth 状态监控依赖服务端下发的 `BONK~` 消息，因此需要安装并启用 `HordesOfAzeroth` 插件。
+- Hordes of Azeroth 状态 Buff 依赖服务端下发的 `BONK~` 消息，因此需要安装并启用 `HordesOfAzeroth` 插件。
 - 插件只监控玩家自己的 Buff。
 
 ## 开发
