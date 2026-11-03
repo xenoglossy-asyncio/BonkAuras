@@ -4,6 +4,10 @@
 
 BonkAuras 把 1.12.1 原生 Buff 和 Hordes of Azeroth 的状态 Buff 放在紧凑、可拖动的图标上。它是一个独立插件：不需要额外库、不修改启动器、不修改服务端。
 
+![BonkAuras 追踪效果](docs/trackers.jpg)
+
+*图标上方显示数值，下方显示剩余时间。*
+
 [English](README.md)
 
 ## 两种 Buff

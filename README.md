@@ -4,6 +4,10 @@ WeakAuras-style buff tracking for [Hordes of Azeroth](https://github.com/jonhald
 
 BonkAuras puts native 1.12.1 buffs and Hordes of Azeroth state buffs on compact, movable icons. It is a standalone addon: no libraries, no launcher changes, no server changes.
 
+![BonkAuras trackers in game](docs/trackers.jpg)
+
+*Tracker values appear above the icons and remaining time appears below them.*
+
 [中文说明](README_zh.md)
 
 ## Two kinds of buffs
