@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  push:
+    tags: [ 'v*' ]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua 5.1
+        run: sudo apt-get update && sudo apt-get install -y lua5.1
+      - name: Check Lua syntax
+        run: |
+          set -e
+          for file in BonkAuras/*.lua; do
+            luac5.1 -p "$file"
+          done
+      - name: Package addon
+        run: zip -r "BonkAuras-${GITHUB_REF_NAME}.zip" BonkAuras
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${GITHUB_REF_NAME}" "BonkAuras-${GITHUB_REF_NAME}.zip" --title "BonkAuras ${GITHUB_REF_NAME}" --generate-notes

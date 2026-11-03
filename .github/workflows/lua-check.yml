@@ -1,0 +1,31 @@
+name: Lua check
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  lua:
+    name: Lua syntax
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua 5.1
+        run: sudo apt-get update && sudo apt-get install -y lua5.1
+      - name: Check Lua syntax
+        run: |
+          set -e
+          for file in BonkAuras/*.lua; do
+            luac5.1 -p "$file"
+          done
+      - name: Check TOC file references
+        run: |
+          set -e
+          tr -d '\r' < BonkAuras/BonkAuras.toc | while IFS= read -r line; do
+            case "$line" in
+              ''|'#'*) continue ;;
+              *.lua) test -f "BonkAuras/$line" || { echo "Missing BonkAuras/$line"; exit 1; } ;;
+            esac
+          done

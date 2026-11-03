@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: BonkAuras
+## Notes: 监控魔兽世界 buff 与 Hordes of Azeroth 天赋状态的 WeakAuras 风格插件
+## Author: xenoglossy-asyncio
+## Version: 0.10
+## SavedVariables: BonkAurasDB
+BonkAurasSpells.lua
+BonkAuras.lua
