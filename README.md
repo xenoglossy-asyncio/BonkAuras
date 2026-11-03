@@ -73,9 +73,9 @@ Open **Profiles** from the first row of the main window.
 
 ### Default profile
 
-On a fresh installation BonkAuras creates an account-wide profile named `Default` with five Hordes of Azeroth state trackers: Shield, Dash, Necrotic, Wounded, and Determination.
+On a fresh installation BonkAuras creates an account-wide profile named `Default` (`默认` when Hordes of Azeroth is in Chinese) with five Hordes of Azeroth state trackers: Shield, Dash, Necrotic, Wounded, and Determination.
 
-The bundled starter profile uses the English UI setting and has tracker tooltips disabled. Change the language from the dropdown and enable tooltips if you prefer.
+The UI language follows Hordes of Azeroth by default, and tracker tooltips are disabled. Both can be changed from the main window.
 
 ## Notes
 

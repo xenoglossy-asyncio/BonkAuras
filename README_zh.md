@@ -73,9 +73,9 @@ BonkAuras 把玩家身上的真实 Buff 和 Hordes of Azeroth 的天赋状态放
 
 ### 默认配置
 
-首次安装时，BonkAuras 会创建一个名为 `Default` 的账号通用配置页，包含 5 个 Hordes of Azeroth 状态监控：护盾、冲刺、死疽、受创、决心。
+首次安装时，BonkAuras 会创建一个名为 `Default`（HOA 为中文时为“默认”）的账号通用配置页，包含 5 个 Hordes of Azeroth 状态监控：护盾、冲刺、死疽、受创、决心。
 
-该初始配置使用英文界面，并关闭了追踪图标 Tooltip。可以在语言下拉框中切换语言，并重新打开 Tooltip。
+界面语言默认跟随 Hordes of Azeroth，追踪图标 Tooltip 默认关闭。两项都可以在主界面修改。
 
 ## 说明
 

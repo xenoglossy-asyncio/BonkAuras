@@ -1,7 +1,7 @@
 BonkAuras = {}
 local DB
 
-local DEFAULT_CONFIG = "BKA15^nq9:PhCG:PhJnVJpp?We{BoWe{sd"
+local DEFAULT_CONFIG = "BKA15cS87:PhCG:PhJnVJpp?We{BoWe{sd"
 local ICON_PREFIX = "Interface\\Icons\\"
 local BUFF_BUTTONS = 24
 
